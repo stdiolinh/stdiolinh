@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("stdiolinh-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta
+      name="description"
+      content="Password-protected research and projects — Linh / Tori."
+    />
+    <title>Research &amp; projects — Linh / Tori</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="shell" id="top">
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-sidebar"
+      >
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Open menu</span>
+      </button>
+      <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+
+      <aside class="sidebar" id="site-sidebar" aria-label="Site">
+        <a class="sidebar__brand" href="index.html#top">Linh / Tori</a>
+        <nav class="sidebar__nav" aria-label="Primary">
+          <ul class="sidebar__list">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#story">Story &amp; VisDev</a></li>
+            <li><a href="index.html#other-things">Other things</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="sidebar__footer-actions">
+            <button
+              type="button"
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Switch to light theme"
+            >
+              <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                </svg>
+              </span>
+              <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <main id="main" class="main main--subpage" tabindex="-1">
+        <section class="section section--band section--subpage-hero">
+          <div class="wrap">
+            <header class="section__head section__head--left">
+              <p class="eyebrow">Research &amp; projects</p>
+              <h1 class="section__title">Questions, prototypes, writing</h1>
+              <p class="section__intro">
+                This page is passphrase-protected. For access, email
+                <a href="mailto:toriwhen@gmail.com">toriwhen@gmail.com</a> (work)
+                or
+                <a href="mailto:stdiolinh@gmail.com">stdiolinh@gmail.com</a>
+                (illustration).
+              </p>
+            </header>
+
+            <div
+              id="research-gate"
+              class="research-gate"
+              role="region"
+              aria-labelledby="gate-title"
+            >
+              <h2 id="gate-title" class="research-gate__title">Locked</h2>
+              <p class="research-gate__hint muted">
+                Enter the passphrase you were given.
+              </p>
+              <form class="research-gate__form" id="research-form" novalidate>
+                <label class="visually-hidden" for="research-pass"
+                  >Passphrase</label
+                >
+                <input
+                  id="research-pass"
+                  class="research-gate__input"
+                  type="password"
+                  name="pass"
+                  autocomplete="current-password"
+                  placeholder="Passphrase"
+                />
+                <button class="research-gate__submit" type="submit">
+                  Unlock
+                </button>
+              </form>
+              <p id="research-error" class="research-gate__error" role="status" hidden></p>
+            </div>
+
+            <div id="research-content" class="research-content" hidden>
+              <ul class="project-grid">
+                <li>
+                  <article class="project-card">
+                    <div class="project-card__media" aria-hidden="true"></div>
+                    <h3 class="project-card__title">Project title</h3>
+                    <p class="project-card__desc">
+                      One line on the problem, method, or outcome. Link out when
+                      ready.
+                    </p>
+                    <a class="project-card__link" href="#">Details →</a>
+                  </article>
+                </li>
+                <li>
+                  <article class="project-card">
+                    <div
+                      class="project-card__media project-card__media--b"
+                      aria-hidden="true"
+                    ></div>
+                    <h3 class="project-card__title">Another thread</h3>
+                    <p class="project-card__desc">
+                      Replace these cards with real titles, thumbnails, and links.
+                    </p>
+                    <a class="project-card__link" href="#">Details →</a>
+                  </article>
+                </li>
+                <li>
+                  <article class="project-card">
+                    <div
+                      class="project-card__media project-card__media--c"
+                      aria-hidden="true"
+                    ></div>
+                    <h3 class="project-card__title">Lab note or essay</h3>
+                    <p class="project-card__desc">
+                      PDFs, Medium, or GitHub — whatever fits the work.
+                    </p>
+                    <a class="project-card__link" href="#">Read →</a>
+                  </article>
+                </li>
+              </ul>
+            </div>
+
+            <p class="subpage-back">
+              <a href="index.html">← Back to site</a>
+            </p>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <div class="wrap site-footer__inner">
+            <p>
+              © <span id="year"></span>
+              <span class="brand-name">Linh / Tori</span>
+            </p>
+            <a class="to-top" href="#top">Top ↑</a>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

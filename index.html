@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("stdiolinh-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta
+      name="description"
+      content="Linh / Tori — product, story, and visual development. UT Austin CS."
+    />
+    <title>Linh / Tori</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="shell" id="top">
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-sidebar"
+      >
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Open menu</span>
+      </button>
+      <div class="sidebar-scrim" id="sidebar-scrim" aria-hidden="true"></div>
+
+      <aside class="sidebar" id="site-sidebar" aria-label="Site">
+        <a class="sidebar__brand" href="#top">Linh / Tori</a>
+        <nav class="sidebar__nav" aria-label="Primary">
+          <ul class="sidebar__list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#story">Story &amp; VisDev</a></li>
+            <li><a href="#other-things">Other things</a></li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="sidebar__footer-actions">
+            <button
+              type="button"
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Switch to light theme"
+            >
+              <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                </svg>
+              </span>
+              <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <main id="main" class="main" tabindex="-1">
+        <section class="intro" aria-labelledby="intro-name">
+          <div class="wrap wrap--narrow">
+            <div class="intro__hero">
+              <div class="intro__frame">
+                <img
+                  class="intro__img"
+                  src="assets/profile.png"
+                  width="112"
+                  height="112"
+                  alt="Pixel art cat avatar"
+                />
+              </div>
+              <div class="intro__copy">
+                <h1 id="intro-name" class="intro__name">
+                  <span>Linh</span> <span class="intro__slash">/</span>
+                  <span>Tori</span>
+                </h1>
+                <p class="intro__tagline">
+                  My practice is driven by liminal spaces and nature.
+                </p>
+                <div class="intro__meta-row">
+                  <p class="intro__location">
+                    <svg
+                      class="intro__pin"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>Seattle, WA</span>
+                  </p>
+                  <div class="intro__pills" role="list">
+                    <span class="pill" role="listitem">
+                      <span class="pill__dot" aria-hidden="true"></span>
+                      Currently reading:
+                      <cite>Katherine Arden’s The Warm Hands of Ghosts</cite>
+                    </span>
+                  </div>
+                </div>
+                <div class="intro__contact-row" aria-label="Contact">
+                  <span class="intro__contact-item">
+                    <span class="intro__contact-tag">Work</span>
+                    <a class="intro__link" href="mailto:toriwhen@gmail.com"
+                      >toriwhen@gmail.com</a
+                    >
+                  </span>
+                  <span class="intro__sep" aria-hidden="true">·</span>
+                  <span class="intro__contact-item">
+                    <span class="intro__contact-tag">Story</span>
+                    <a class="intro__link" href="mailto:stdiolinh@gmail.com"
+                      >stdiolinh@gmail.com</a
+                    >
+                  </span>
+                  <span class="intro__sep" aria-hidden="true">·</span>
+                  <a
+                    class="intro__link"
+                    href="https://www.linkedin.com/in/toriwhen/?skipRedirect=true"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="section section--tight">
+          <div class="wrap wrap--narrow">
+            <div class="resume-row">
+              <h2 class="resume-row__label">About</h2>
+              <div class="resume-row__body">
+                <p class="resume-row__text">
+                  Product by day, boards and vis dev after hours; guided by the
+                  small, steady: whether in a lighting scene, or an ML surface.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="section section--tight">
+          <div class="wrap wrap--narrow">
+            <div class="resume-row resume-row--stack">
+              <h2 class="resume-row__label">Experience</h2>
+              <div class="resume-row__body">
+                <article class="exp-card">
+                  <div class="exp-card__top">
+                    <span class="exp-card__org">Hulu / Disney+</span>
+                    <span class="exp-card__dates">2025 — present</span>
+                  </div>
+                  <h3 class="exp-card__role">Product Manager II</h3>
+                  <p class="exp-card__track">
+                    Recommendations &amp; Personalization
+                  </p>
+                  <p class="exp-card__meta">Viewer discovery and freshness</p>
+                </article>
+                <article class="exp-card">
+                  <div class="exp-card__top">
+                    <span class="exp-card__org"
+                      >Climb NORA — Project NORA LLC</span
+                    >
+                    <span class="exp-card__dates">July 2024 — Dec 2025</span>
+                  </div>
+                  <h3 class="exp-card__role">Co-Founder of Bouldering Gym</h3>
+                  <p class="exp-card__track">Visual Development</p>
+                  <p class="exp-card__meta">
+                    Concept development, user research, market analysis, and
+                    creative direction.
+                  </p>
+                </article>
+                <article class="exp-card">
+                  <div class="exp-card__top">
+                    <span class="exp-card__org">Hulu / Disney+</span>
+                    <span class="exp-card__dates">2022 — 2025</span>
+                  </div>
+                  <h3 class="exp-card__role">Product Manager I</h3>
+                  <p class="exp-card__track">Platform Tooling</p>
+                  <p class="exp-card__meta">
+                    Internal APIs and services for editorial and safety
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="education" class="section section--tight">
+          <div class="wrap wrap--narrow">
+            <div class="resume-row">
+              <h2 class="resume-row__label">Education</h2>
+              <div class="resume-row__body">
+                <div class="edu-card">
+                  <div class="edu-card__mark" aria-hidden="true">UT</div>
+                  <div>
+                    <p class="edu-card__school">University of Texas at Austin</p>
+                    <p class="edu-card__degree">Bachelor of Science, Computer Science</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="section section--tight">
+          <div class="wrap wrap--narrow">
+            <div class="resume-row resume-row--stack">
+              <h2 class="resume-row__label">Projects</h2>
+              <div class="resume-row__body">
+                <div class="project-grid-astro">
+                  <a class="project-tile" href="#">
+                    <img
+                      class="project-tile__img"
+                      src="assets/ref-hero.png"
+                      width="320"
+                      height="200"
+                      alt=""
+                    />
+                    <span class="project-tile__cap">Coming soon…</span>
+                  </a>
+                  <a class="project-tile" href="#">
+                    <img
+                      class="project-tile__img"
+                      src="assets/ref-layout.png"
+                      width="320"
+                      height="200"
+                      alt=""
+                    />
+                    <span class="project-tile__cap">More soon…</span>
+                  </a>
+                </div>
+                <p class="refs-note muted">
+                  Thumbnails use layout references; swap for your own ship work.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="story" class="section section--tight section--story">
+          <div class="wrap wrap--narrow">
+            <div class="resume-row resume-row--stack">
+              <h2 class="resume-row__label">Story &amp; VisDev</h2>
+              <div class="resume-row__body">
+                <p class="resume-row__text muted">
+                  Placeholder frames — replace with stills (consistent aspect
+                  ratios read calmer).
+                </p>
+                <div class="gallery gallery--compact">
+                  <figure class="gallery__item">
+                    <div class="gallery__frame gallery__frame--1"></div>
+                    <figcaption>Sequence</figcaption>
+                  </figure>
+                  <figure class="gallery__item">
+                    <div class="gallery__frame gallery__frame--2"></div>
+                    <figcaption>Character</figcaption>
+                  </figure>
+                  <figure class="gallery__item">
+                    <div class="gallery__frame gallery__frame--3"></div>
+                    <figcaption>Environment</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="other-things"
+          class="section section--tight"
+          aria-labelledby="other-things-heading"
+        >
+          <div class="wrap wrap--narrow">
+            <div class="resume-row resume-row--stack">
+              <h2 id="other-things-heading" class="resume-row__label">
+                Other things
+              </h2>
+              <div class="resume-row__body">
+                <div class="other-things">
+                  <div class="other-things__row">
+                    <span class="other-things__sublabel">Skills</span>
+                    <div class="other-things__pills">
+                      <span class="tag-pill">Databricks</span>
+                      <span class="tag-pill">Figma</span>
+                      <span class="tag-pill">Procreate</span>
+                      <span class="tag-pill">Cursor</span>
+                      <span class="tag-pill">Claude</span>
+                      <span class="tag-pill">JIRA MCP</span>
+                    </div>
+                  </div>
+                  <div class="other-things__row">
+                    <span class="other-things__sublabel">Illustrated for</span>
+                    <div class="other-things__pills">
+                      <span class="tag-pill">Climb NORA</span>
+                      <span class="tag-pill">Jesse Firestone Coaching</span>
+                    </div>
+                  </div>
+                  <div class="other-things__row">
+                    <span class="other-things__sublabel">Hobbies include</span>
+                    <div class="other-things__pills">
+                      <span class="tag-pill">Climbing</span>
+                      <span class="tag-pill">Drawing</span>
+                      <span class="tag-pill">Messing with my cats</span>
+                      <span class="tag-pill">Library hopping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <div class="wrap site-footer__inner">
+            <p>
+              © <span id="year"></span>
+              <span class="brand-name">Linh / Tori</span>
+            </p>
+            <a class="to-top" href="#top">Top ↑</a>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
