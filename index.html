@@ -2,6 +2,17 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var b = document.createElement("base");
+        b.href =
+          location.hostname === "stdiolinh.github.io" &&
+          location.pathname.indexOf("/stdiolinh") === 0
+            ? "/stdiolinh/"
+            : "./";
+        document.head.appendChild(b);
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
       (function () {
@@ -235,30 +246,14 @@
               <h2 class="resume-row__label">Projects</h2>
               <div class="resume-row__body">
                 <div class="project-grid-astro">
-                  <a class="project-tile" href="#">
-                    <img
-                      class="project-tile__img"
-                      src="assets/ref-hero.png"
-                      width="320"
-                      height="200"
-                      alt=""
-                    />
-                    <span class="project-tile__cap">Coming soon…</span>
+                  <a class="project-tile" href="#" aria-label="Project — coming soon">
+                    <div class="project-tile__blank" aria-hidden="true"></div>
                   </a>
-                  <a class="project-tile" href="#">
-                    <img
-                      class="project-tile__img"
-                      src="assets/ref-layout.png"
-                      width="320"
-                      height="200"
-                      alt=""
-                    />
-                    <span class="project-tile__cap">More soon…</span>
+                  <a class="project-tile" href="#" aria-label="Project — coming soon">
+                    <div class="project-tile__blank" aria-hidden="true"></div>
                   </a>
                 </div>
-                <p class="refs-note muted">
-                  Thumbnails use layout references; swap for your own ship work.
-                </p>
+                <p class="refs-note muted">Coming Soon</p>
               </div>
             </div>
           </div>
@@ -270,8 +265,7 @@
               <h2 class="resume-row__label">Story &amp; VisDev</h2>
               <div class="resume-row__body">
                 <p class="resume-row__text muted">
-                  Placeholder frames — replace with stills (consistent aspect
-                  ratios read calmer).
+                  A workshop of all the stories and thoughts.
                 </p>
                 <div class="gallery gallery--compact">
                   <figure class="gallery__item">
