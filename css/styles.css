@@ -320,28 +320,100 @@ code {
   display: block;
 }
 
+/* Mobile bottom dock — primary nav on narrow viewports */
+.mobile-dock {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.45rem calc(0.35rem + env(safe-area-inset-bottom, 0px));
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-hairline);
+  box-shadow: 0 -6px 28px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme="light"] .mobile-dock {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.mobile-dock__scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  padding: 0.15rem 0;
+  scrollbar-width: none;
+}
+
+.mobile-dock__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-dock__link {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  padding: 0.5rem 0.65rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--mint);
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: color-mix(in srgb, var(--card) 88%, transparent);
+}
+
+.mobile-dock__link:hover {
+  color: var(--mint-bright);
+  border-color: var(--mint-dim);
+}
+
+.mobile-dock__link:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 2px;
+}
+
+.theme-toggle--dock {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+}
+
 @media (max-width: 900px) {
   :root {
     --sidebar-w: 0px;
   }
 
-  .main {
-    margin-left: 0;
-    padding-top: 3.25rem;
-  }
-
-  .nav-toggle {
-    display: flex;
+  .nav-toggle,
+  .sidebar-scrim {
+    display: none !important;
   }
 
   .sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.25s ease;
-    box-shadow: 8px 0 40px rgba(0, 0, 0, 0.45);
+    display: none !important;
   }
 
-  .sidebar.is-open {
-    transform: translateX(0);
+  .main {
+    margin-left: 0;
+    padding-top: max(0.65rem, env(safe-area-inset-top, 0px));
+    padding-bottom: calc(3.85rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-dock {
+    display: flex;
   }
 }
 

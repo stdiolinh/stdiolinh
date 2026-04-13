@@ -126,15 +126,15 @@
   (function initTheme() {
     var key = "stdiolinh-theme";
     var root = document.documentElement;
-    var btn = document.getElementById("theme-toggle");
+    var buttons = document.querySelectorAll(".theme-toggle");
 
     function setLabel() {
-      if (!btn) return;
       var t = root.getAttribute("data-theme") || "dark";
-      btn.setAttribute(
-        "aria-label",
-        t === "light" ? "Switch to dark theme" : "Switch to light theme"
-      );
+      var label =
+        t === "light" ? "Switch to dark theme" : "Switch to light theme";
+      buttons.forEach(function (btn) {
+        btn.setAttribute("aria-label", label);
+      });
     }
 
     function apply(next) {
@@ -148,11 +148,11 @@
 
     setLabel();
 
-    if (btn) {
+    buttons.forEach(function (btn) {
       btn.addEventListener("click", function () {
         var cur = root.getAttribute("data-theme") || "dark";
         apply(cur === "light" ? "dark" : "light");
       });
-    }
+    });
   })();
 })();
