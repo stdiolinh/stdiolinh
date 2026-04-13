@@ -796,6 +796,15 @@ code {
   text-align: center;
   color: var(--text);
   background: rgba(10, 10, 12, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.project-tile__ext {
+  font-size: 0.85em;
+  opacity: 0.75;
 }
 
 [data-theme="light"] .project-tile__cap {
