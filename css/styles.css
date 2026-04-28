@@ -785,6 +785,18 @@ code {
   background: color-mix(in srgb, var(--card) 94%, var(--mint) 6%);
 }
 
+.project-tile__thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.project-tile:hover .project-tile__thumb {
+  opacity: 0.93;
+}
+
 .project-tile__cap {
   position: absolute;
   left: 0;
